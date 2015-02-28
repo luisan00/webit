@@ -3,7 +3,7 @@ from datetime import datetime
 from  bitcoinrpc.authproxy import AuthServiceProxy
 
 # rpc Connection
-host_rpc= ''
+host_rpc= '127.0.0.1'
 port_rpc=8332
 user_rpc=''
 pass_rpc=''
