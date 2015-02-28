@@ -4,13 +4,10 @@ Webit inicialmente es un conjunto de scripts en Python que generan un archivo in
 
 Por defecto accede al nodo instalado en la misma máquina en el que es ejecutado(127.0.0.1).Los parametros host, port, password y user pueden ser personalizados en el archivo node.py en la sección rpc Connection:
 
-#rpc Connection
+rpc Connection
 
-host_rpc= '127.0.0.1'
-
-port_rpc=8332
-
-user_rpc=''
-
-pass_rpc=''
+	host_rpc= '127.0.0.1'
+	port_rpc=8332
+	user_rpc=''
+	pass_rpc=''
 
