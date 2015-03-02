@@ -1,17 +1,17 @@
 # webit
 
-Webit inicialmente es un conjunto de scripts en Python 2.X para generar un archivo index.html completo, mostrando informaciÛn de un nodo Bitcoin al que accede mediante rpc.
+Webit inicialmente es un conjunto de scripts en Python 2.X para generar un archivo index.html completo, mostrando informaci√≥n de un nodo Bitcoin al que accede mediante rpc.
 
-Por defecto accede al nodo instalado en la misma m·quina en el que es ejecutado(127.0.0.1).Los parametros host, port, password y user pueden ser personalizados en el archivo node.py en la secciÛn rpc Connection:
+Por defecto accede al nodo instalado en la misma m√°quina en el que es ejecutado(127.0.0.1).Los parametros host, port, password y user pueden ser personalizados en el archivo node.py en la secci√≥n rpc Connection:
 
 rpc Connection
-	host_rpc= '127.0.0.1'
-	port_rpc=8332
-	user_rpc=''
-	pass_rpc=''
+  host_rpc= '127.0.0.1'
+  port_rpc=8332
+  user_rpc=''
+  pass_rpc=''
 
-#Dependencias.
+#Dependencias
 
-Webit usa las siguientes librerias Python:
+Webit requiere para su funcionamiento de las siguientes librerias Python:
 
 bitcoinrpc - https://github.com/jgarzik/python-bitcoinrpc
