@@ -10,6 +10,8 @@ rpc Connection
 	user_rpc=''
 	pass_rpc=''
 
+webit can be installed in several machines such PC-desktop, laptop,  Server, PC-card type (Raspberry, BeagleBone, etc and similar)
+
 # Requirements
 For its proper operation, Webit requires the following Python libraries: 
 
@@ -17,7 +19,7 @@ For its proper operation, Webit requires the following Python libraries:
 
 	Tornado Web Server - https://pypi.python.org/pypi/tornado
 	
-# Runing webit
+# Running webit
 
 Run server.py as follow:
 
