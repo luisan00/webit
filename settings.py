@@ -14,7 +14,7 @@ Database_pass = ''
 RPC_host = '192.168.1.100'
 RPC_port = 8332
 RPC_user = 'rpcuser'
-RPC_pass = 'indomitus'
+RPC_pass = 'rpcpassword'
 
 #Refresh Interval between Bitcoin node and the data base in minutes.
 
