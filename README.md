@@ -23,7 +23,7 @@ For its proper operation, Webit requires the following Python libraries:
 
 Run server.py as follow:
 
-	/# pyyhon server.py
+	/# python server.py
 
 
 
