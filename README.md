@@ -19,6 +19,8 @@ For its proper operation, Webit requires the following Python libraries:
 
 	Tornado Web Server - https://pypi.python.org/pypi/tornado
 	
+	PyGeoIP - https://github.com/appliedsec/pygeoip
+	
 # Running webit
 
 Run server.py as follow:
