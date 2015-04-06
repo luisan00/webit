@@ -71,7 +71,7 @@ def dumppeers():# **** Dump new data to database ****
         pingtime = list_peers[i]['pingtime']
         Brecv = list_peers[i]['bytesrecv']
         Bsent = list_peers[i]['bytessent']
-        Fflag = GeoIP.find_country(addr) + '.png'
+        Fflag = GeoIP.find_country(addr)
         arg =(i+1, ident, addr, Fflag, subver ,version ,int(pingtime*1000),Brecv ,Bsent)
         sql ='''INSERT INTO peers (i, ident, addr, Fflag, subver, version, pingtime, Brecv, Bsent)
                 VALUES (?,?,?,?,?,?,?,?,?)''' 
