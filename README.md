@@ -21,9 +21,14 @@ For its proper operation, Webit requires the following Python libraries:
 	
 	PyGeoIP - https://github.com/appliedsec/pygeoip
 	
-# Running webit
+# Install and Running webit
 
-Run server.py as follow:
+Installing in linux is than simple as:
+
+	/# cd ~
+	/# git clone https://github.com/luisan00/webit.git
+
+And run server.py as follow:
 
 	/# python server.py
 
