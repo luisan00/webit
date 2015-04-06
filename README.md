@@ -13,8 +13,8 @@ rpc Connection
 # Requirements
 For its proper operation, Webit requires the following Python libraries: 
 
-bitcoinrpc - https://github.com/jgarzik/python-bitcoinrpc
+	bitcoinrpc - https://github.com/jgarzik/python-bitcoinrpc
 
-Tornado Web Server - https://pypi.python.org/pypi/tornado
+	Tornado Web Server - https://pypi.python.org/pypi/tornado
 
 
