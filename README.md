@@ -1,4 +1,4 @@
-# webit
+# Webit
 Webit is a combination of Python 2.X scripts that generate a complete  web solution . It displays Bitcoin node information which is accessed through rpc.
 
 By default, it accesses the installed node in the same device where it is carried out (127.0.0.1). The parameters, host, port, password and user can be personalized within the settings.py file under the section, rpc Connection:
@@ -10,7 +10,7 @@ rpc Connection
 	user_rpc=''
 	pass_rpc=''
 
-webit can be installed in several machines such PC-desktop, laptop,  Server, PC-card type (Raspberry, BeagleBone, etc and similar)
+Webit can be installed in several machines such PC-desktop, laptop,  Server, PC-card type (Raspberry, BeagleBone, etc and similars)
 
 # Requirements
 For its proper operation, Webit requires the following Python libraries: 
