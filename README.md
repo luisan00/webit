@@ -12,6 +12,8 @@ rpc Connection
 
 Webit can be installed in several machines such PC-desktop, laptop,  Server, PC-card type (Raspberry, BeagleBone, etc and similars)
 
+	Try out a demonstration : http://webitnode.tk
+
 # Requirements
 For its proper operation, Webit requires the following Python libraries: 
 
@@ -31,6 +33,7 @@ Installing in linux is than simple as:
 And run server.py as follow:
 
 	/# python server.py
+
 
 
 
