@@ -12,16 +12,16 @@ rpc Connection
 
 Webit can be installed in several machines such PC-desktop, laptop,  Server, PC-card type (Raspberry, BeagleBone, etc and similars)
 
-	Try out a demonstration : http://webitnode.tk
+	Try out a demonstration : <http://webitnode.tk>
 
 # Requirements
 For its proper operation, Webit requires the following Python libraries: 
 
-	bitcoinrpc - https://github.com/jgarzik/python-bitcoinrpc
+	bitcoinrpc - <https://github.com/jgarzik/python-bitcoinrpc>
 
-	Tornado Web Server - https://pypi.python.org/pypi/tornado
+	Tornado Web Server - <https://pypi.python.org/pypi/tornado>
 	
-	PyGeoIP - https://github.com/appliedsec/pygeoip
+	PyGeoIP - <https://github.com/appliedsec/pygeoip>
 	
 # Install and Running webit
 
