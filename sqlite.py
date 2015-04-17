@@ -153,4 +153,4 @@ def refreshdb():
     dumpnodeinfo()
     dumplastblock()
     dumppeers()
-    threading.Timer(settings.Interval*60, refreshdb).start()
+    threading.Timer(settings.Interval * 60, refreshdb).start()
