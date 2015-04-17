@@ -39,5 +39,4 @@ def peer_info():
 def nowis():
     tpnow=datetime.utcnow()
     timenow = tpnow.strftime('%Y-%m-%d %H:%M:%S')
-    
     return timenow
