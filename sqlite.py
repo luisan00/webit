@@ -11,6 +11,7 @@ def createdb():# Create database
     conn= sqlite3.connect(dbname)
     conn.commit()
     conn.close()
+    
 def trunc(tab):# Truncate tables in database
     conn= sqlite3.connect(dbname)
     cursordb = conn.cursor()
@@ -20,25 +21,24 @@ def trunc(tab):# Truncate tables in database
     cursordb.close()
     conn.close()
     if tab == 'nodeinfo':
-        createnodeinfo()
-        print('[OK] - Truncada la tabla ' + tab + ' en la base de datos ' + dbname + ' --- ' + str(datetime.now()))    
+        createnodeinfo()      
     elif tab == 'peers':
         createpeers()
-        print('[OK] - Truncada la tabla ' + tab + ' en la base de datos ' + dbname + ' --- ' + str(datetime.now()))
     elif tab == 'lastblock':
         createlastblock()
-        print('[OK] - Truncada la tabla ' + tab + ' en la base de datos ' + dbname + ' --- ' + str(datetime.now()))
     else:
-        print('[Error] - No se pudo truncar la tabla ' + tab + ' en la base de datos ' + dbname + ' --- ' + str(datetime.now()))        
+        print('[Error] - No se pudo truncar la tabla ' + tab + ' en la base de datos ' + dbname + ' --- ' + str(datetime.now()))
+                
 def createnodeinfo():# **** Create tables in database ****
     conn= sqlite3.connect(dbname)
     cursordb=conn.cursor()
     sql = '''CREATE TABLE IF NOT EXISTS nodeinfo 
-    (height INT(16), hash TEXT(16),conn INT(4), diff INT(32), protover INT(8), appver INT(8), time DATETIME(16))'''
+    (height INT(16), hash TEXT(16),conn INT(4), diff INT(32), protover INT(8), appver INT(8), time DATETIME)'''
     cursordb.execute(sql)
     conn.commit()
     cursordb.close()
     conn.close()
+
 def createpeers():# **** Create tables in database ****
     conn= sqlite3.connect(dbname)
     cursordb=conn.cursor()
@@ -48,6 +48,7 @@ def createpeers():# **** Create tables in database ****
     conn.commit()
     cursordb.close()
     conn.close()
+
 def createlastblock():# **** Create tables in database ****
     conn= sqlite3.connect(dbname)
     cursordb=conn.cursor()
@@ -76,11 +77,10 @@ def dumppeers():# **** Dump new data to database ****
         sql ='''INSERT INTO peers (i, ident, addr, Fflag, subver, version, pingtime, Brecv, Bsent)
                 VALUES (?,?,?,?,?,?,?,?,?)''' 
         cursordb.execute(sql,arg)
-        print 'registro '+ str(i+1) + ' de ' + str(len(list_peers)) + ' procesado correctamente'
     conn.commit()
     cursordb.close()
     conn.close()
-    print('[OK] - Actualizados los registros de la tabla peers. --- ' + str(datetime.now()))
+    
 def dumplastblock():# **** Dump new data to database ****
     trunc('lastblock') # Truncate the table.
     conn = sqlite3.connect(dbname)
@@ -100,9 +100,9 @@ def dumplastblock():# **** Dump new data to database ****
     conn.commit()
     cursordb.close()
     conn.close()
-    print('[OK] - Actualizados los registros de la tabla lastblock. --- ' + str(datetime.now()))     
+    
 def dumpnodeinfo():# **** Dump new data to database ****
-    trunc('nodeinfo') # Truncate the table.
+    trunc('nodeinfo')
     conn = sqlite3.connect(dbname)
     cursordb = conn.cursor()
     node_info = node.node_info()
@@ -112,7 +112,7 @@ def dumpnodeinfo():# **** Dump new data to database ****
     difficulty = node_info['difficulty']
     protover = node_info['protocolversion']
     appver = node_info['version']
-    servertime = datetime.now()
+    servertime = node.nowis()
     arg = (int(last_block), last_hash, int(peers), int(difficulty), int(protover), int(appver), servertime)
     sql = '''INSERT INTO nodeinfo (height, hash, conn, diff, protover, appver, time)
             VALUES (?,?,?,?,?,?,?)'''
@@ -120,7 +120,7 @@ def dumpnodeinfo():# **** Dump new data to database ****
     conn.commit()
     cursordb.close()
     conn.close()
-    print('[OK] - Actualizados los registros de la tabla nodeinfo. --- ' +  str(datetime.now()))
+    
 def query_db(tab):
         conn = sqlite3.connect(dbname)
         cursordb = conn.cursor()

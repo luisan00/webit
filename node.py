@@ -1,3 +1,4 @@
+from datetime import datetime
 from  bitcoinrpc.authproxy import AuthServiceProxy
 import settings
 
@@ -34,3 +35,9 @@ def peer_info():
     rpcconnection=basic_auth()
     list_peer = rpcconnection.getpeerinfo()
     return list_peer
+
+def nowis():
+    tpnow=datetime.utcnow()
+    timenow = tpnow.strftime('%Y-%m-%d %H:%M:%S')
+    
+    return timenow

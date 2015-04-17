@@ -6,14 +6,16 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 from tornado.options import define, options
+from node import nowis
 from settings import Server_port
 from sqlite import query_db
 from sqlite import refreshdb
 
+
 refreshdb()
 
 define("port", default = Server_port, help="run on the given port", type=int)
-
+   
 class MainHandler(tornado.web.RequestHandler): 
         
     def get(self):
@@ -27,7 +29,7 @@ def main():
     tornado.options.absolute_import
     application = tornado.web.Application([
                                            (r"/", MainHandler),
-                                           (r'/img/(.*)', tornado.web.StaticFileHandler,{'path':'./documents/static/img/'})],
+                                           (r'/(.*)', tornado.web.StaticFileHandler,{'path':'./documents/static/'})],
                                             settings = dict(template_path=os.path.join(os.path.dirname(__file__), "./templates"),),)
                         
     http_server = tornado.httpserver.HTTPServer(application)
@@ -35,5 +37,5 @@ def main():
     tornado.ioloop.IOLoop.instance().start()
 
 if __name__ == "__main__":
-    print 'Tornado WebServer listening on port ' + str(options.port)
+    print 'Tornado WebServer listening on port ' + str(options.port) + '\t\t\t\t' + nowis() + ' UTC'
     main()

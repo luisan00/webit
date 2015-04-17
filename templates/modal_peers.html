@@ -16,14 +16,18 @@
 					<th>SubVersion</th>
 					<th>Version</th>
 					<th>Ping (ms)</th>
-					<th>Bytes sent.</th>
-					<th>Bytes recv.</th>
+					<th align='center'><span class="glyphicon glyphicon-arrow-down" title='Received (KBytes)' aria-hidden="true" ></span></th>
+					<th align='center'><span class="glyphicon glyphicon-arrow-up" title='Sent (KBytes)'aria-hidden="true" ></span></th>
 					</tr>
 					{% for i in range(len(peers)) %}
 						<tr>
 						{% for col in range(1,9) %}
 							{% if col == 3 %}
 								<td><img title="{{ GeoIP.find_extcountry(peers[i][2]) }}" alt={{peers[i][col]}} src=./img/flags/{{peers[i][col]}}.png ></td>
+							{% elif col== 7 %}
+								<td>{{ peers[i][col] / 1024 }}</td>
+							{% elif col == 8 %}
+								<td>{{ peers[i][col] / 1024 }}</td>
 							{% else %}	 
 								<td> {{ peers[i][col] }} </td>
 							{% end %}
