@@ -34,7 +34,4 @@ And run server.py as follow:
 
 
 
-Code is licensed under The MIT License (MIT)
-2015 luisan00
-
-
+This code is licensed under The MIT License (MIT), see LICENSE for more information.
