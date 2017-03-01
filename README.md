@@ -12,7 +12,7 @@ rpc Connection
 
 Webit can be installed in several devices such as PC-desktop, laptop,  Server, PC-card type (Raspberry, BeagleBone, etc and similars)
 
-# Requirements
+# Requeriments
 For its proper operation, Webit requires the following Python libraries: 
 
 	bitcoinrpc - <https://github.com/jgarzik/python-bitcoinrpc>
